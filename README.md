@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/terminal-banner.gif" alt="Terminal-style dot art spelling Thembela Mthimkhulu, with a subtle animated scan and dotted wave" width="100%">
+  <img src="assets/terminal-banner-wave.gif" alt="Terminal-style dot art spelling Thembela Mthimkhulu with a subtle animated wave beside the stationary name" width="100%">
 </p>
 
 <h2 align="center">I turn data, processes and ideas into working systems.</h2>

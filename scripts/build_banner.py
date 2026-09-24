@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from math import cos, pi, sin
+from math import sin
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -84,10 +84,8 @@ def draw_frame(name: list[tuple[int, int]], waves: list[tuple[int, int, int]], p
     draw.text((47, 280), "SOFTWARE  /  DATA  /  SYSTEMS", font=small, fill=MUTED)
     draw.text((1153, 280), "●  BUILDING USEFUL SYSTEMS", font=small, fill=ACCENT, anchor="ra")
 
-    sweep = 80 + 620 * (1 - cos(2 * pi * phase)) / 2
     for x, y in name:
-        color = ACCENT if abs(x - sweep) < 36 else INK
-        draw.ellipse((x - 2.4, y - 2.4, x + 2.4, y + 2.4), fill=color)
+        draw.ellipse((x - 2.4, y - 2.4, x + 2.4, y + 2.4), fill=INK)
     for x, y, row in waves:
         strength = abs(x - (790 + 350 * phase)) < 25
         color = MUTED if strength and row < 3 else DIM
@@ -105,7 +103,7 @@ def main() -> None:
     palette = frames[0].quantize(colors=64)
     frames = [frame.quantize(palette=palette) for frame in frames]
     frames[0].save(
-        ASSETS / "terminal-banner.gif",
+        ASSETS / "terminal-banner-wave.gif",
         save_all=True,
         append_images=frames[1:],
         optimize=True,
