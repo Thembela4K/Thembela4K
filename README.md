@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="assets/profile-banner.svg" alt="Thembela Mthimkhulu — software, data and AI systems builder based in Eswatini" width="100%">
+  <img src="assets/profile-banner.gif" alt="Thembela Mthimkhulu — software and data systems builder based in Eswatini" width="100%">
 </p>
 
 <h2 align="center">I turn data, processes and ideas into working systems.</h2>
 
 <p align="center">
-  Management Information Systems Officer at <strong>Datamatics Eswatini</strong> · Based in Mbabane, Eswatini
+  Management Information Systems Officer at <a href="https://datamatics.co.sz/"><strong>Datamatics Eswatini</strong></a> · Based in Mbabane, Eswatini
 </p>
 
 <p align="center">
