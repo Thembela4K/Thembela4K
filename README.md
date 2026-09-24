@@ -27,7 +27,7 @@
 ### Selected work
 
 <p align="center">
-  <img src="assets/work-timeline.svg" alt="Branching timeline of eight completed projects from 2024 to 2026" width="100%">
+  <img src="assets/work-timeline-light.svg" alt="Branching timeline of eight completed projects from 2024 to 2026" width="100%">
 </p>
 
 <details>
