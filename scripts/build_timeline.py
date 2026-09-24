@@ -5,7 +5,7 @@ from xml.sax.saxutils import escape
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "assets" / "work-timeline-light.svg"
+OUTPUT = ROOT / "assets" / "work-timeline-monochrome.svg"
 
 GROUPS = [
     (
@@ -93,35 +93,35 @@ def main() -> None:
         '<title id="title">Selected work, 2024 to 2026</title>',
         '<desc id="desc">A branching timeline of eight software, data, AI and GIS projects.</desc>',
         '<rect width="1200" height="1280" rx="18" fill="#ffffff"/>',
-        '<rect x="1" y="1" width="1198" height="1278" rx="17" fill="none" stroke="#dce6e0"/>',
-        '<path d="M 48 125 H 1152 M 48 1248 H 1152" stroke="#e2eae5"/>',
-        '<path d="M 187 158 V 1232" stroke="#a9bfb1" stroke-width="2" stroke-dasharray="3 8"/>',
+        '<rect x="1" y="1" width="1198" height="1278" rx="17" fill="none" stroke="#dedede"/>',
+        '<path d="M 48 125 H 1152 M 48 1248 H 1152" stroke="#e5e5e5"/>',
+        '<path d="M 187 158 V 1232" stroke="#b8b8b8" stroke-width="2" stroke-dasharray="3 8"/>',
     ]
-    add_text(parts, 54, 38, "SELECTED WORK", size=15, color="#39745a", weight=700, spacing=2)
-    add_text(parts, 54, 93, "Work, over time.", size=38, color="#1b2d24", weight=700)
-    add_text(parts, 943, 92, "2024–2026  /  PROJECTS", size=15, color="#64796d", weight=700)
-    add_text(parts, 54, 1268, "BUILT IN ESWATINI", size=13, color="#718579", weight=700, spacing=2)
+    add_text(parts, 54, 38, "SELECTED WORK", size=15, color="#3d3d3d", weight=700, spacing=2)
+    add_text(parts, 54, 93, "Work, over time.", size=38, color="#101010", weight=700)
+    add_text(parts, 943, 92, "2024–2026  /  PROJECTS", size=15, color="#6d6d6d", weight=700)
+    add_text(parts, 54, 1268, "BUILT IN ESWATINI", size=13, color="#757575", weight=700, spacing=2)
 
     for year, start, projects in GROUPS:
-        add_text(parts, 56, start + 43, year, size=28, color="#24563e", weight=700)
-        add_text(parts, 57, start + 64, f"{len(projects):02d} PROJECT{'S' if len(projects) != 1 else ''}", size=12, color="#6c8173", weight=700)
+        add_text(parts, 56, start + 43, year, size=28, color="#1c1c1c", weight=700)
+        add_text(parts, 57, start + 64, f"{len(projects):02d} PROJECT{'S' if len(projects) != 1 else ''}", size=12, color="#737373", weight=700)
         for index, (category, title, first, second) in enumerate(projects):
             y = start + index * 124
             center = y + 55
             parts.extend(
                 [
-                    f'<path d="M 187 {center} H 238" stroke="#a9bfb1" stroke-width="2"/>',
-                    f'<circle cx="187" cy="{center}" r="7" fill="#ffffff" stroke="#3c8865" stroke-width="2"/>',
-                    f'<circle cx="187" cy="{center}" r="2" fill="#3c8865"/>',
-                    f'<rect x="238" y="{y}" width="910" height="112" rx="12" fill="#f8faf8" stroke="#dce6e0"/>',
-                    f'<path d="M 250 {y + 14} V {y + 98}" stroke="#3c8865" stroke-width="3" stroke-linecap="round"/>',
+                    f'<path d="M 187 {center} H 238" stroke="#b8b8b8" stroke-width="2"/>',
+                    f'<circle cx="187" cy="{center}" r="7" fill="#ffffff" stroke="#333333" stroke-width="2"/>',
+                    f'<circle cx="187" cy="{center}" r="2" fill="#333333"/>',
+                    f'<rect x="238" y="{y}" width="910" height="112" rx="12" fill="#fafafa" stroke="#dcdcdc"/>',
+                    f'<path d="M 250 {y + 14} V {y + 98}" stroke="#2d2d2d" stroke-width="3" stroke-linecap="round"/>',
                 ]
             )
-            add_text(parts, 270, y + 25, category, size=12, color="#326d51", weight=700,
+            add_text(parts, 270, y + 25, category, size=12, color="#535353", weight=700,
                      family="Consolas, DejaVu Sans Mono, monospace", spacing=1)
-            add_text(parts, 270, y + 54, title, size=23, color="#1b2d24", weight=700)
-            add_text(parts, 270, y + 80, first, size=17, color="#43564b")
-            add_text(parts, 270, y + 101, second, size=17, color="#43564b")
+            add_text(parts, 270, y + 54, title, size=23, color="#171717", weight=700)
+            add_text(parts, 270, y + 80, first, size=17, color="#444444")
+            add_text(parts, 270, y + 101, second, size=17, color="#444444")
 
     parts.append("</svg>")
     OUTPUT.write_text("\n".join(parts) + "\n", encoding="utf-8")
