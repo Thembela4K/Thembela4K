@@ -26,6 +26,13 @@
 
 ### Selected work
 
+<p align="center">
+  <img src="assets/work-timeline.svg" alt="Branching timeline of eight completed projects from 2024 to 2026" width="100%">
+</p>
+
+<details>
+<summary>Read the project stories as text</summary>
+
 - **ESPPRA AI Assistant & Operational Dashboard** — I built the assistant and dashboard layer for a workload assessment platform. Staff can explore current records, follow trends and prepare reports that go through review before export.
 
 - **Operations Core CRM** — I brought client records, quotations, invoices, approvals and team assignments into one Laravel system for Datamatics. It gives the team a clearer way to follow everyday work from start to finish.
@@ -41,6 +48,8 @@
 - **Malkerns Municipal Web GIS** — I worked with the web support team to put ward maps on the council website and make them usable on both phones and desktop screens.
 
 - **Water Use Survey Reporting** — After the field survey, I turned Microsoft Access records into repeatable reports and worked with GIS colleagues to keep the summaries aligned with the captured data.
+
+</details>
 
 ### Toolkit
 
